@@ -12,5 +12,5 @@ urlpatterns = [
     path('dzbanyAKorbele', views.dzbanyAKorbele, name='nejnovejsiprodukty'),
     path('keramika', views.keramika, name='keramika'),
     path('oAutorovi', views.About, name='About'),
-    path('Konakt', views.Contact, name='Kontakt'),
+    path('kontakt', views.Contact, name='Kontakt'),
 ]

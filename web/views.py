@@ -1,5 +1,5 @@
 from django.template import loader
-from .models import logo, produkt
+from .models import logo, produkt, Kontakt, Autor
 from django.http import HttpResponse
 
 
@@ -101,12 +101,15 @@ def keramika(request):
 
 def About(request):
     context = {"Logo": logo.objects.get(pk=1).obrazek.name,
-               }
-    template = loader.get_template('About.html')
+               "Title": "",
+               "Informace": Autor.objects.get(pk=1).informace}
+    template = loader.get_template('Autor.html')
     return HttpResponse(template.render(context, request))
 
 
 def Contact(request):
-    context = {}
-    template = loader.get_template('Home.html')
+    context = {"Logo": logo.objects.get(pk=1).obrazek.name,
+               "Kontakt": Kontakt.objects.get(pk=1),
+               "Title": ""}
+    template = loader.get_template('Kontakt.html')
     return HttpResponse(template.render(context, request))

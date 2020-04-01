@@ -1,0 +1,27 @@
+{% extends 'Core.html' %}
+
+{%  block content %}
+</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+        <div class="margin-top centered">
+            <div class="contact" style="">
+                <h2 class="w3-center w3-wide">KONTAKTY</h2>
+                    <div class="w3-container w3-center">
+                         <hr>
+                        <div id="contactLayout">
+                            <h4 class="w3-wide"> <i class="fa fa-user w3-hover-opacity w3-large"></i> {{ Kontakt.majitel }}</h4>
+                            <h4 class="w3-wide"><i class="fa fa-fw w3-hover-opacity fa-map-marker"></i> {{ Kontakt.bydliste }}</h4>
+                            <h4 class="w3-wide"><i class="fa fa-fw w3-hover-opacity fa-phone"></i> {{ Kontakt.telefoniCislo }}</h4>
+                            <h4 class="w3-wide"><i class="fa fa-fw w3-hover-opacity fa-envelope"></i> {{ Kontakt.email }}</h4>
+                            <h4 class="w3-wide"> <i class="fa fa-instagram w3-hover-opacity w3-large"></i> {{ Kontakt.instagram }}</h4>
+                            <hr>
+                            <br>
+                        </div>
+                    </div>
+            </div>
+        </div>
+</div>
+
+{% endblock %}
