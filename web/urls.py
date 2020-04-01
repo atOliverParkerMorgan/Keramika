@@ -13,4 +13,5 @@ urlpatterns = [
     path('keramika', views.keramika, name='keramika'),
     path('oAutorovi', views.About, name='About'),
     path('kontakt', views.Contact, name='Kontakt'),
+
 ]
